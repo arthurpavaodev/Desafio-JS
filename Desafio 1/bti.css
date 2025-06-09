@@ -1,0 +1,37 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f7f9fa;
+    color: #222;
+    padding: 40px;
+    margin: 0;
+}
+
+button {
+    font-size: 18px;
+    padding: 12px 28px;
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    align-items: center;
+    display: block;
+    margin: 40px auto;
+}
+
+button:hover {
+    background: #005fa3;
+    transform: translateY(-2px) scale(1.03);
+}
+
+.contador {
+    font-size: 24px;
+    background: #ffffff;
+    padding: 18px 32px;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    display: inline-block;
+    align-items: center;
+}

@@ -1,0 +1,67 @@
+:root {
+--bg-light: #fff;
+--bg-dark: #181c23;
+--text-light: #222;
+--text-dark: #f4f4f4;
+--accent: #4fc3f7;
+}
+
+body {
+background: var(--bg-light);
+color: var(--text-light);
+font-family: Arial, sans-serif;
+transition: background 0.3s, color 0.3s;
+margin: 0;
+padding: 2rem;
+}
+
+.toggle-switch {
+display: flex;
+align-items: center;
+gap: 0.5rem;
+cursor: pointer;
+user-select: none;
+}
+
+.toggle-switch input[type="checkbox"] {
+display: none;
+}
+
+.slider {
+width: 40px;
+height: 22px;
+background: #e3f2fd;
+border-radius: 12px;
+position: relative;
+transition: background 0.3s;
+}
+
+.slider::before {
+content: "";
+position: absolute;
+left: 3px;
+top: 3px;
+width: 16px;
+height: 16px;
+background: var(--accent);
+border-radius: 50%;
+transition: transform 0.3s;
+}
+
+input[type="checkbox"]:checked + .slider {
+background: #1565c0;
+}
+
+input[type="checkbox"]:checked + .slider::before {
+transform: translateX(18px);
+background: #fff;
+}
+
+body.dark-mode {
+background: var(--bg-dark);
+color: var(--text-dark);
+}
+
+body.dark-mode .slider {
+background: #263238;
+}
